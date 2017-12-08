@@ -1,3 +1,5 @@
+# soachishti (p146011@nu.edu.pk)
+
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw 
