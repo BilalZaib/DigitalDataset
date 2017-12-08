@@ -18,7 +18,7 @@ from keras.callbacks import EarlyStopping
 size_of_input = 10 * 10 # Size of our image
 num_classes = 10
 total_accuracy = []
-verbose = 1
+verbose = 0
 
 # Setting for Keras and Sklearn
 
@@ -30,13 +30,13 @@ shuffle  = True # Keras
 
 early_stopping = False
 batch_size = 64
-neurons = 10                       # Number of neuron for hidden layer
+neurons = 100                       # Number of neuron for hidden layer
 activation_keras = 'sigmoid'        # Keras
 activation_sklearn = 'logistic'     # Sklearn
 output_activation = 'softmax'       # Keras   
-epochs = 100                        # Keras
-max_iter = 100                      # Sklearn 
-learning_rate = 0.01
+epochs = 200                        # Keras
+max_iter = 200                      # Sklearn 
+learning_rate = 0.05
 
 loss_function = 'categorical_crossentropy' # 'kullback_leibler_divergence'
 
@@ -95,7 +95,7 @@ def using_sklearn(x_train, y_train, x_test, y_test):
     print ('Output Layer size: ',mlp.n_outputs_)
     print ('Number of Iteration: ',mlp.n_iter_)
     print ('Output Activation: ',mlp.out_activation_)
-    print ('Loss', mlp.loss_)
+    #print ('Loss', mlp.loss_)
 
 def using_keras(x_train, y_train, x_test, y_test):
     print ("\n\n###### Using Keras ######")
